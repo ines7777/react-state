@@ -1,23 +1,20 @@
-import './App.css';
-import Address from'./Component/Profile/Adress';
-import Name from'./Component/Profile/FullName';
-import Profile from './Component/Profile/ProfilePhoto';
-import Navbar from './Component/Profile/Navbar'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { Component } from 'react';
+import NewComp from './Component/NewComp';
 
-
-function App() {
-  return (
-    <div className="App">
-      <Navbar/>
-      <div class="container"> 
-      <Profile/>
-      <Name/>
-      <Address/>
+ class App extends Component {
+  styles={
+    fontSyle:"bold",
+    color:"teal",
+    textAlign:"center"
+  };
+  render() {
+    return (
+      <div className='App'> 
+        <h1 style={this.styles}>welcome</h1>
+        <NewComp />
       </div>
-     
-    </div>
-  );
+    )
+  }
 }
 
 export default App;
